@@ -1,6 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	131492894	Play_pushing_grocery_cart_63821			\Default Work Unit\Play_pushing_grocery_cart_63821	
-
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	568259061	pushing-grocery-cart-63821	C:\Users\Lenovo\Documents\GitHub\CSF24\FaragHallway\FaragHallway_WwiseProject\.cache\Mac\SFX\pushing-grocery-cart-63821_6ABAA330.wem		\Actor-Mixer Hierarchy\Default Work Unit\pushing-grocery-cart-63821		2953872
-
