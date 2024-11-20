@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{2B9C11C0-8BA4-4C6F-A809-52A894956992}" SchemaVersion="119">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{2B9C11C0-8BA4-4C6F-A809-52A894956992}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{2B9C11C0-8BA4-4C6F-A809-52A894956992}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="main" ID="{1C4B772F-4A21-46E1-A98F-9BC72F767FF7}">
+					<ObjectInclusionList>
+						<ObjectRef Name="pushing-grocery-cart-63821" ID="{C8D497AC-3DCE-419C-8A7E-B6BD1214A89E}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_pushing_grocery_cart_63821" ID="{8D18DADB-0473-4E07-B435-511C4BCF778B}" WorkUnitID="{34767B53-09B4-4C06-A626-5C2219A55383}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

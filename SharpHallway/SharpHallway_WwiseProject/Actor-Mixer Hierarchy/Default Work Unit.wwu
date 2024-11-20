@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}" SchemaVersion="119">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="pushing-grocery-cart-63821" ID="{C8D497AC-3DCE-419C-8A7E-B6BD1214A89E}" ShortID="238416639">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="MovingObstacle" ID="{10ED20CB-F04F-44FA-B87F-ABDDCC80E365}" WorkUnitID="{40AD909A-78A4-4293-AF04-400CF42EC2C6}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9CDD2FE4-B1C4-44B5-BD1E-2E0FAAECF1FF}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="pushing-grocery-cart-63821" ID="{52711288-0A8B-4537-85C0-52953C4D9D76}">
+							<Language>SFX</Language>
+							<AudioFile>pushing-grocery-cart-63821.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="951300056"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="pushing-grocery-cart-63821" ID="{52711288-0A8B-4537-85C0-52953C4D9D76}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

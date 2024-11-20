@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{34767B53-09B4-4C06-A626-5C2219A55383}" SchemaVersion="119">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{34767B53-09B4-4C06-A626-5C2219A55383}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{34767B53-09B4-4C06-A626-5C2219A55383}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_pushing_grocery_cart_63821" ID="{8D18DADB-0473-4E07-B435-511C4BCF778B}">
+					<ChildrenList>
+						<Action Name="" ID="{09ECF3E3-E370-4AAF-8166-B4ED11398099}" ShortID="498677056">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pushing-grocery-cart-63821" ID="{C8D497AC-3DCE-419C-8A7E-B6BD1214A89E}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

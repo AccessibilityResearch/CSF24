@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: c0119c2ba48b6f4ca80952a894956992
     GuidInternal: 
-    m_lastTime: -8584695364511592039
-    List: []
+    m_lastTime: -8584694882297393144
+    List:
+    - name: main
+      guid: 2f774b1c214ae146a98f9bc72f767ff7
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c0119c2ba48b6f4ca80952a894956992
+      - ElementName: main
+        ObjectType: 7
+        guid: 2f774b1c214ae146a98f9bc72f767ff7
+      Path: SoundBanks\Default Work Unit\main
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 537b7634b409064ca6265c2219a55383
     GuidInternal: 
-    m_lastTime: -8584695364510740950
-    List: []
+    m_lastTime: -8584694896510031625
+    List:
+    - name: Play_pushing_grocery_cart_63821
+      guid: dbda188d7304074eb435511c4bcf778b
+      id: 131492894
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 537b7634b409064ca6265c2219a55383
+      - ElementName: Play_pushing_grocery_cart_63821
+        ObjectType: 3
+        guid: dbda188d7304074eb435511c4bcf778b
+      Path: Events\Default Work Unit\Play_pushing_grocery_cart_63821
+      maxAttenuation: 10
+      maxDuration: 30.768
+      minDuration: 30.768
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -139,7 +170,7 @@ MonoBehaviour:
     m_lastTime: -8584695364511931877
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 03000000050000000600000007000000080000000a0000000b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
