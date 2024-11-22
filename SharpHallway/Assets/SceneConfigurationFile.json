@@ -30,11 +30,12 @@
                         "y": 0.0,
                         "z": 0.0
                     },
-                    "EndPoint": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0
-                    },
+                  "EndPoint": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+
                     "RespawnDelay": 0.0,
                     "Speed": 0.0,
                     "BackNForth": false,
@@ -309,7 +310,8 @@
                     },
                     "RespawnDelay": 2.0,
                     "Speed": 2.0,
-                    "BackNForth": false,
+                  "BackNForth": false,
+                    "soundEvent": "Play_pushing_grocery_cart_63821",
                     "ObstacleMaterialPath": "Assets/Thirdparty/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Magenta.mat"
                 },
                 {
@@ -354,33 +356,33 @@
             "HallwayRightMaterialPath": "Assets/Thirdparty/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Orange.mat",
             "HallwayCloseMaterialPath": "Assets/Thirdparty/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Orange.mat",
             "Obstacles": [
-                {
-                    "Name": "Door 4",
-                    "Scale": {
-                        "x": 1.0,
-                        "y": 3.0,
-                        "z": 1.0
-                    },
-                    "Position": {
-                        "x": 0.012000083923339844,
-                        "y": 1.4900000095367432,
-                        "z": 25.441001892089845
-                    },
-                    "StartPoint": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0
-                    },
-                    "EndPoint": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0
-                    },
-                    "RespawnDelay": 0.0,
-                    "Speed": 0.0,
-                    "BackNForth": false,
-                    "ObstacleMaterialPath": "Assets/Thirdparty/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Magenta.mat"
+              {
+                "Name": "Door 4",
+                "Scale": {
+                  "x": 1.0,
+                  "y": 3.0,
+                  "z": 1.0
                 },
+                "Position": {
+                  "x": 0.012000083923339844,
+                  "y": 1.4900000095367432,
+                  "z": 25.441001892089845
+                },
+                "StartPoint": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "EndPoint": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "RespawnDelay": 0.0,
+                "Speed": 0.0,
+                "BackNForth": false,
+                "ObstacleMaterialPath": "Assets/Thirdparty/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Magenta.mat"
+              },
                 {
                     "Name": "Door 1",
                     "Scale": {
@@ -518,33 +520,34 @@
                 }
             ],
             "MovingObstacles": [
-                {
-                    "Name": "Person 1",
-                    "Scale": {
-                        "x": 1.0,
-                        "y": 1.0,
-                        "z": 1.0
-                    },
-                    "Position": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0
-                    },
-                    "StartPoint": {
-                        "x": 3.135999917984009,
-                        "y": 0.5265045166015625,
-                        "z": 12.335000038146973
-                    },
-                    "EndPoint": {
-                        "x": -3.0380001068115236,
-                        "y": 0.5265045166015625,
-                        "z": 11.619999885559082
-                    },
-                    "RespawnDelay": 2.0,
-                    "Speed": 2.0,
-                    "BackNForth": false,
-                    "ObstacleMaterialPath": "Assets/Thirdparty/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Magenta.mat"
+              {
+                "Name": "Person 1",
+                "Scale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
                 },
+                "Position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "StartPoint": {
+                  "x": 3.135999917984009,
+                  "y": 0.5265045166015625,
+                  "z": 12.335000038146973
+                },
+                "EndPoint": {
+                  "x": -3.0380001068115236,
+                  "y": 0.5265045166015625,
+                  "z": 11.619999885559082
+                },
+                "RespawnDelay": 2.0,
+                "Speed": 2.0,
+                "BackNForth": false,
+                "soundEvent": "Play_pushing_grocery_cart_63821",
+                "ObstacleMaterialPath": "Assets/Thirdparty/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Magenta.mat"
+              },
                 {
                     "Name": "Person 2",
                     "Scale": {

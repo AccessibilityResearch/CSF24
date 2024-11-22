@@ -22,16 +22,25 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{D2F5F20F-7B3F-5568-0B6E-D3FBA16B3952}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A704A9DE-04EC-1B6A-82E9-44856359CE90}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
+				<File Id="835404116" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>air-vent-1-27167.wav</ShortName>
+					<CachePath>SFX/air-vent-1-27167_818F3B66.wem</CachePath>
+				</File>
 				<File Id="951300056" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>pushing-grocery-cart-63821.wav</ShortName>
 					<CachePath>SFX/pushing-grocery-cart-63821_FBC78EF0.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
+				<Event Id="950077362" Name="Play_air_vent_1_27167" DurationType="OneShot" DurationMin="53.28" DurationMax="53.28">
+					<MediaRefs>
+						<MediaRef Id="835404116"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="131492894" Name="Play_pushing_grocery_cart_63821" MaxAttenuation="10" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="951300056"/>
@@ -40,5 +49,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{060E3DCA-9A36-9471-EC01-CCAAD8ABD1FD}</FileHash>
+	<FileHash>{879C8CDD-F639-B483-B4D9-71730C020CB4}</FileHash>
 </SoundBanksInfo>

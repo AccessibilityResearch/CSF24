@@ -191,6 +191,13 @@ public class JSONScript : MonoBehaviour
                 movingObstacleScript.Speed = scene.MovingObstacles[i].Speed;
                 movingObstacleScript.RespawnDelay = scene.MovingObstacles[i].RespawnDelay;
                 movingObstacleScript.BackNForth = scene.MovingObstacles[i].BackNForth;
+
+                // Add Akambient script to the obstacle
+                AkAmbient akAmbient = movingObstacle.AddComponent<AkAmbient>();
+                // Attach Wwise AkAmbient or use AkSoundEngine for dynamic event posting
+                AttachWwiseSound(movingObstacle, scene.MovingObstacles[i].soundEvent);
+
+                movingObstacle.AddComponent<Rigidbody>();
             }
             #endregion
         }
@@ -198,6 +205,16 @@ public class JSONScript : MonoBehaviour
         {
             Debug.Log($"Scene out of bound ");
         }
+    }
+
+    private void AttachWwiseSound(GameObject obj, string soundEventName)
+    {
+        // Using AkSoundEngine.PostEvent for dynamic control
+        obj.AddComponent<AkGameObj>(); // Required for Wwise audio
+        uint eventId = AkSoundEngine.GetIDFromString(soundEventName);
+
+        // Trigger the event
+        AkSoundEngine.PostEvent(eventId, obj);
     }
 
     private Material GetMaterial(string materialPath)

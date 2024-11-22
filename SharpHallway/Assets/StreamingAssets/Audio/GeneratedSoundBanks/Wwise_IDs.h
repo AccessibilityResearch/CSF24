@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_AIR_VENT_1_27167 = 950077362U;
         static const AkUniqueID PLAY_PUSHING_GROCERY_CART_63821 = 131492894U;
     } // namespace EVENTS
 
