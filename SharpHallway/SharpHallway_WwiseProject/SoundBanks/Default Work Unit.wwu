@@ -5,7 +5,16 @@
 			<ChildrenList>
 				<SoundBank Name="main" ID="{1C4B772F-4A21-46E1-A98F-9BC72F767FF7}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Footsteps" ID="{0B97DD9C-0A63-408A-973F-38BD57A21CD7}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="pushing-grocery-cart-63821" ID="{C8D497AC-3DCE-419C-8A7E-B6BD1214A89E}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Ouch" ID="{06A20D03-8623-4215-A6F6-94488EFF0E72}" WorkUnitID="{34767B53-09B4-4C06-A626-5C2219A55383}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_WallBump2" ID="{80E72FA7-4AC0-4293-900D-8052D3878C6B}" WorkUnitID="{34767B53-09B4-4C06-A626-5C2219A55383}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="step3" ID="{BBBCD759-1C2F-445F-A304-868FE41D12A6}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_stomp" ID="{8F78C014-BE6C-4675-B30E-5FA1F85E8815}" WorkUnitID="{34767B53-09B4-4C06-A626-5C2219A55383}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="step2" ID="{9767BB89-7A3E-4898-A408-9F27A0682B26}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="step1" ID="{1874B83F-ECB3-4BA9-B8A5-BAC51767DEE6}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_DeepThud1" ID="{1B3C744B-FF7E-4C6E-8D66-88DDA6B43730}" WorkUnitID="{34767B53-09B4-4C06-A626-5C2219A55383}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MutedThud3" ID="{5E8284A3-6148-4E05-A285-C5B0ED9F441A}" WorkUnitID="{34767B53-09B4-4C06-A626-5C2219A55383}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_pushing_grocery_cart_63821" ID="{8D18DADB-0473-4E07-B435-511C4BCF778B}" WorkUnitID="{34767B53-09B4-4C06-A626-5C2219A55383}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

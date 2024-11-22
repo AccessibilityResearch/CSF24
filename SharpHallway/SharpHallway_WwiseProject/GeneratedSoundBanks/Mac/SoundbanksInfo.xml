@@ -9,36 +9,134 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D326F752-7CA2-0A14-FDB1-63ECE89D0199}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{AF3A57DD-18BF-724C-3A0A-188481A5AA2D}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<ShareSets>
+					<Plugin Id="1904434771" Name="Medium_Room1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="348963605" Name="Reverb"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="2904300592" Name="HallReverb">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1904434771"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
+			<GameParameters>
+				<GameParameter Id="1961994583" Name="ObstacleDistance"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C60F1317-DD41-1716-18AD-0336E86004E6}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E638E356-2F6B-2BD5-3705-EA8F44A2BF9E}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
+				<File Id="102693433" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>run2.wav</ShortName>
+					<CachePath>SFX/run2_666E7603.wem</CachePath>
+				</File>
+				<File Id="329984591" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DeepThud1.wav</ShortName>
+					<CachePath>SFX/DeepThud1_93BC4F92.wem</CachePath>
+				</File>
+				<File Id="343672014" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>run2.wav</ShortName>
+					<CachePath>SFX/run2_0A512AD8.wem</CachePath>
+				</File>
+				<File Id="391563401" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>stomp.wav</ShortName>
+					<CachePath>SFX/stomp_ECEBB1B0.wem</CachePath>
+				</File>
+				<File Id="432550782" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WallBump2.wav</ShortName>
+					<CachePath>SFX/WallBump2_325BBA3E.wem</CachePath>
+				</File>
+				<File Id="848556440" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MutedThud3.wav</ShortName>
+					<CachePath>SFX/MutedThud3_D872C706.wem</CachePath>
+				</File>
+				<File Id="896989057" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ouch.wav</ShortName>
+					<CachePath>SFX/Ouch_AD58C89E.wem</CachePath>
+				</File>
+				<File Id="922703133" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>run2.wav</ShortName>
+					<CachePath>SFX/run2_DBE8B9D4.wem</CachePath>
+				</File>
 				<File Id="951300056" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>pushing-grocery-cart-63821.wav</ShortName>
 					<CachePath>SFX/pushing-grocery-cart-63821_FBC78EF0.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
+				<Event Id="483039760" Name="Play_DeepThud1" DurationType="OneShot" DurationMin="0.28854" DurationMax="0.28854">
+					<MediaRefs>
+						<MediaRef Id="329984591"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3854155799" Name="Play_Footsteps" DurationType="OneShot" DurationMin="0.31614" DurationMax="0.36721">
+					<MediaRefs>
+						<MediaRef Id="102693433"/>
+						<MediaRef Id="343672014"/>
+						<MediaRef Id="922703133"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="716284631" Name="Play_MutedThud3" DurationType="OneShot" DurationMin="0.26742" DurationMax="0.26742">
+					<MediaRefs>
+						<MediaRef Id="848556440"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1979731779" Name="Play_Ouch" DurationType="OneShot" DurationMin="0.32154" DurationMax="0.32154">
+					<MediaRefs>
+						<MediaRef Id="896989057"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="131492894" Name="Play_pushing_grocery_cart_63821" MaxAttenuation="10" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="951300056"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2600469397" Name="Play_step1" DurationType="OneShot" DurationMin="0.31614" DurationMax="0.31614">
+					<MediaRefs>
+						<MediaRef Id="922703133"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2600469398" Name="Play_step2" DurationType="OneShot" DurationMin="0.36067" DurationMax="0.36067">
+					<MediaRefs>
+						<MediaRef Id="343672014"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2600469399" Name="Play_step3" DurationType="OneShot" DurationMin="0.36721" DurationMax="0.36721">
+					<MediaRefs>
+						<MediaRef Id="102693433"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2753042117" Name="Play_stomp" DurationType="OneShot" DurationMin="0.84943" DurationMax="0.84943">
+					<MediaRefs>
+						<MediaRef Id="391563401"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3126293924" Name="Play_WallBump2" DurationType="OneShot" DurationMin="0.833175" DurationMax="0.833175">
+					<MediaRefs>
+						<MediaRef Id="432550782"/>
+					</MediaRefs>
+				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="1961994583" Name="ObstacleDistance"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8F9F2502-60BC-375E-9042-C4D3E6ADD15A}</FileHash>
+	<FileHash>{AC8D9D0E-28D0-F8C0-74F8-8ADC9135D1AB}</FileHash>
 </SoundBanksInfo>

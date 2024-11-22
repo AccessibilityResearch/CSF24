@@ -14,6 +14,105 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_MutedThud3" ID="{5E8284A3-6148-4E05-A285-C5B0ED9F441A}">
+					<ChildrenList>
+						<Action Name="" ID="{48E5427C-EA8B-4E44-A8CF-A489765B9AEE}" ShortID="736787976">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MutedThud3" ID="{97EA0A59-507C-4398-AEF7-1FDE523A1165}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_DeepThud1" ID="{1B3C744B-FF7E-4C6E-8D66-88DDA6B43730}">
+					<ChildrenList>
+						<Action Name="" ID="{415D321A-278E-4096-954A-BFCA161C4D9F}" ShortID="113471744">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DeepThud1" ID="{0F04B283-4C2A-446A-8D1B-42AAB8FAE904}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_stomp" ID="{8F78C014-BE6C-4675-B30E-5FA1F85E8815}">
+					<ChildrenList>
+						<Action Name="" ID="{4A9DC6C5-1CF5-4212-88EA-0B6385FF93FC}" ShortID="982130563">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="stomp" ID="{2B3B919C-59FA-41FB-B374-01AD118DCCD1}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WallBump2" ID="{80E72FA7-4AC0-4293-900D-8052D3878C6B}">
+					<ChildrenList>
+						<Action Name="" ID="{8AF03B2A-3882-4A7D-86BA-340F845D74B0}" ShortID="494192430">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WallBump2" ID="{CD272815-DF0B-41A6-89AB-88891906A446}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_step1" ID="{61B2C40B-1AF5-4D4E-8266-14DF5CFD0F4D}">
+					<ChildrenList>
+						<Action Name="" ID="{BC951B6D-501D-414F-A1A5-02C28A080BF6}" ShortID="45418057">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="step1" ID="{1874B83F-ECB3-4BA9-B8A5-BAC51767DEE6}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_step2" ID="{AE8DCE5F-307A-44B4-AD38-26AC933351EC}">
+					<ChildrenList>
+						<Action Name="" ID="{3EAAC89E-3842-4CBE-8CA9-84D9403B3062}" ShortID="419474021">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="step2" ID="{9767BB89-7A3E-4898-A408-9F27A0682B26}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_step3" ID="{331CC530-4D0C-40AC-9C6D-ECD832A6AFBA}">
+					<ChildrenList>
+						<Action Name="" ID="{905DEDD2-74C5-421B-8CE2-28724D78FD48}" ShortID="857701911">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="step3" ID="{BBBCD759-1C2F-445F-A304-868FE41D12A6}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Footsteps" ID="{69B5032E-1CAE-4F4D-AE98-7B8F6ABCD80A}">
+					<ChildrenList>
+						<Action Name="" ID="{E730A062-F9B4-48DE-AC5A-6FE6E37C9F61}" ShortID="758774180">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{0B97DD9C-0A63-408A-973F-38BD57A21CD7}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ouch" ID="{06A20D03-8623-4215-A6F6-94488EFF0E72}">
+					<ChildrenList>
+						<Action Name="" ID="{3797C127-3013-413C-8161-E01ADB6D45CD}" ShortID="974485896">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ouch" ID="{4A119BEE-B785-48B4-860D-85C8BF586BA5}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

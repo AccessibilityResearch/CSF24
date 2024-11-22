@@ -6,20 +6,42 @@ using UnityEngine;
 public class FPSController : MonoBehaviour
 {
     public Camera playerCamera;
-    public float walkSpeed = 6f;
-    public float runSpeed = 12f;
+    public float walkSpeed = 5f;    //6f
+    public float runSpeed = 7f;     //12f
     public float jumpPower = 7f;
     public float gravity = 10f;
+
+    #region Footstep Variables
+    float currentSpeed; // variable to calculate the current speed
+    public bool canMove = true;
+    public bool footsteps = true;
+    private bool hittingWall = false;
+    public float stepInterval = 0.1f; // a variable to determine interval between steps
+    public float stepTimer = 0f;    // tracks how much time passed since last footstep sound
+    float inputThreshold = 0.1f; // Define a small threshold so that footsteps stop when player stops, no delay
+    private bool isWalking = false;
+    private bool isRunning = false;
+    float stepSlow = 1.8f;  // variable to slow footsteps down 
+
+    #endregion
 
 
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;
 
+    #region WWise Events and such
+
+    [Header("WWise Events")]
+    [SerializeField] public AK.Wwise.Event walkFootstep;
+    [SerializeField] public AK.Wwise.Event stomp;
+  
+
+    #endregion
 
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
 
-    public bool canMove = true;
+    
 
 
     CharacterController characterController;
@@ -75,5 +97,53 @@ public class FPSController : MonoBehaviour
         }
 
         #endregion
+
+        #region Handles Footsteps
+
+        if (!hittingWall)
+        {
+            if (Input.GetKey(KeyCode.LeftShift)) // Assuming LeftShift is the run key
+            {
+                currentSpeed = runSpeed;
+            }
+            else
+            {
+                currentSpeed = walkSpeed;
+            }
+
+            // Where we change the time between footsteps, increases if running
+            float stepInterval2 = stepInterval * (walkSpeed / currentSpeed) * stepSlow;
+
+            
+            // check if input from player
+            // vertical = W , S
+            // horizontal = A , D
+
+            if (Mathf.Abs(Input.GetAxis("Vertical")) > inputThreshold || Mathf.Abs(Input.GetAxis("Horizontal")) > inputThreshold)
+            {
+                stepTimer += Time.deltaTime;
+                if (stepTimer >= stepInterval2 && footsteps == true)
+                {
+                    walkFootstep.Post(gameObject);
+                    stepTimer = 0;
+                }
+            }
+            else
+            {
+                stepTimer = 0;
+            }
+        }
+        #endregion
+
+        #region Handles Stomp
+
+        if (isWalking == false && isRunning == false && Input.GetKeyDown(KeyCode.Q))
+        {
+            stomp.Post(gameObject);
+        }
+
+        #endregion
     }
+
+
 }
