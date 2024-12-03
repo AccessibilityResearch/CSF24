@@ -3,7 +3,7 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{34767B53-09B4-4C06-A626-5C2219A55383}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_pushing_grocery_cart_63821" ID="{8D18DADB-0473-4E07-B435-511C4BCF778B}">
+				<Event Name="Play_pushing_grocery_cart" ID="{8D18DADB-0473-4E07-B435-511C4BCF778B}">
 					<ChildrenList>
 						<Action Name="" ID="{09ECF3E3-E370-4AAF-8166-B4ED11398099}" ShortID="498677056">
 							<ReferenceList>
@@ -20,6 +20,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="air-vent-1-27167" ID="{194A0ACE-FF49-4A81-8BD0-7F535D7B25BA}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Footsteps_Snow_Walk" ID="{4CD58104-A05D-47FF-8A6E-0191F1343AC8}">
+					<ChildrenList>
+						<Action Name="" ID="{98672869-016A-43B7-9F00-9E54D7DB8F9A}" ShortID="792322051">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps_Snow_Walk" ID="{9F8E0E6A-0B02-4D04-B4F5-205D0EA747BE}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

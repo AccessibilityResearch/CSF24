@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 448affd3016884489994981d9f7deeea
     GuidInternal: 
-    m_lastTime: -8584693671337865302
+    m_lastTime: -8584683593680040844
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 14370cc828a8bd47820a43b4fffb35c8
     GuidInternal: 
-    m_lastTime: -8584693138590540826
+    m_lastTime: -8584683593680624580
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: c0119c2ba48b6f4ca80952a894956992
     GuidInternal: 
-    m_lastTime: -8584693138589015730
+    m_lastTime: -8584683422453449774
     List:
     - name: main
       guid: 2f774b1c214ae146a98f9bc72f767ff7
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 537b7634b409064ca6265c2219a55383
     GuidInternal: 
-    m_lastTime: -8584693138593614983
+    m_lastTime: -8584683398893032605
     List:
     - name: Play_air_vent_1_27167
       guid: 0c545cc212c4814e8b5be6445da4cb47
@@ -113,9 +113,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 53.28
       minDuration: 53.28
-    - name: Play_pushing_grocery_cart_63821
-      guid: dbda188d7304074eb435511c4bcf778b
-      id: 131492894
+    - name: Play_Footsteps_Snow_Walk
+      guid: 0481d54c5da0ff478a6e0191f1343ac8
+      id: 460858545
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -123,10 +123,27 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 537b7634b409064ca6265c2219a55383
-      - ElementName: Play_pushing_grocery_cart_63821
+      - ElementName: Play_Footsteps_Snow_Walk
+        ObjectType: 3
+        guid: 0481d54c5da0ff478a6e0191f1343ac8
+      Path: Events\Default Work Unit\Play_Footsteps_Snow_Walk
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_pushing_grocery_cart
+      guid: dbda188d7304074eb435511c4bcf778b
+      id: 2553032715
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 537b7634b409064ca6265c2219a55383
+      - ElementName: Play_pushing_grocery_cart
         ObjectType: 3
         guid: dbda188d7304074eb435511c4bcf778b
-      Path: Events\Default Work Unit\Play_pushing_grocery_cart_63821
+      Path: Events\Default Work Unit\Play_pushing_grocery_cart
       maxAttenuation: 10
       maxDuration: -1
       minDuration: -1
@@ -142,7 +159,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: fca380687de2c646b5fdcd7df194386e
     GuidInternal: 
-    m_lastTime: -8584693138593607917
+    m_lastTime: -8584683593681540478
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -156,7 +173,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: fb76c3fd3b01ae4fa4df6d1aa780768f
     GuidInternal: 
-    m_lastTime: -8584693671337882994
+    m_lastTime: -8584683593680040844
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -170,7 +187,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 2e4bb9c8b1bb3141b428f1be9d1e5c06
     GuidInternal: 
-    m_lastTime: -8584693671337882994
+    m_lastTime: -8584683593680040844
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -184,11 +201,11 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 7f26b3cb98d94946886f746ad72e19b9
     GuidInternal: 
-    m_lastTime: -8584693671337882994
+    m_lastTime: -8584683593680040844
     List: []
-  ExpandedFileSystemItemIds: 010000000200000003000000050000000600000007000000080000000a0000000b0000000c000000
-  ExpandedWaapiItemIds: 0100000003000000050000000600000007000000080000000a0000000b0000000c000000
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 1
+  currentDataSource: 0
   CurrentPluginConfig: 

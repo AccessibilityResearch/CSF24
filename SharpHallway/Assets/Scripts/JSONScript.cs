@@ -93,6 +93,8 @@ public class JSONScript : MonoBehaviour
                     movingObstacleCopy.RespawnDelay = movingObstacleScript.RespawnDelay;
                     movingObstacleCopy.Speed = movingObstacleScript.Speed;
                     movingObstacleCopy.BackNForth = movingObstacleScript.BackNForth;
+                    movingObstacleCopy.EventName = movingObstacle.GetComponent<WwiseAttacher>().eventName;
+                    movingObstacleCopy.EventId = movingObstacle.GetComponent<WwiseAttacher>().eventId;
                     movingObstacleCopy.ObstacleMaterialPath = GetMaterialPath(movingObstacle.gameObject);
                     newScene.MovingObstacles.Add(movingObstacleCopy);
                 }
@@ -192,12 +194,22 @@ public class JSONScript : MonoBehaviour
                 movingObstacleScript.RespawnDelay = scene.MovingObstacles[i].RespawnDelay;
                 movingObstacleScript.BackNForth = scene.MovingObstacles[i].BackNForth;
 
-                // Add Akambient script to the obstacle
-                AkAmbient akAmbient = movingObstacle.AddComponent<AkAmbient>();
-                // Attach Wwise AkAmbient or use AkSoundEngine for dynamic event posting
-                AttachWwiseSound(movingObstacle, scene.MovingObstacles[i].soundEvent);
 
+                // Add a rigidbody to the obstacle
                 movingObstacle.AddComponent<Rigidbody>();
+
+                // Attach Wwiseattcher script to the obstacle
+                WwiseAttacher wwiseattcher = movingObstacle.AddComponent<WwiseAttacher>();
+                wwiseattcher.eventName = scene.MovingObstacles[i].EventName;
+                wwiseattcher.eventId = scene.MovingObstacles[i].EventId;
+
+                Debug.Log($"Is {gameObject.name} active? {gameObject.activeInHierarchy}");
+
+
+
+
+
+
             }
             #endregion
         }
@@ -207,15 +219,15 @@ public class JSONScript : MonoBehaviour
         }
     }
 
-    private void AttachWwiseSound(GameObject obj, string soundEventName)
-    {
-        // Using AkSoundEngine.PostEvent for dynamic control
-        obj.AddComponent<AkGameObj>(); // Required for Wwise audio
-        uint eventId = AkSoundEngine.GetIDFromString(soundEventName);
+    //private void AttachWwiseSound(GameObject obj, string soundEventName)
+    //{
+    //    // Using AkSoundEngine.PostEvent for dynamic control
+    //    obj.AddComponent<AkGameObj>(); // Required for Wwise audio
+    //    uint eventId = AkSoundEngine.GetIDFromString(soundEventName);
 
-        // Trigger the event
-        AkSoundEngine.PostEvent(eventId, obj);
-    }
+    //    // Trigger the event
+    //    AkSoundEngine.PostEvent(eventId, obj);
+    //}
 
     private Material GetMaterial(string materialPath)
     {

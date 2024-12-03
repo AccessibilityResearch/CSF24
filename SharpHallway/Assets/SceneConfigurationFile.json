@@ -310,8 +310,9 @@
                     },
                     "RespawnDelay": 2.0,
                     "Speed": 2.0,
-                  "BackNForth": false,
-                    "soundEvent": "Play_pushing_grocery_cart_63821",
+                    "BackNForth": false,
+                    "EventName": "Play_Footsteps_Snow_Walk",
+                    "EventId": 460858545,
                     "ObstacleMaterialPath": "Assets/Thirdparty/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Magenta.mat"
                 },
                 {
@@ -339,6 +340,7 @@
                     "RespawnDelay": 2.0,
                     "Speed": 2.0,
                     "BackNForth": false,
+                    "EventName": "Play_pushing_grocery_cart",
                     "ObstacleMaterialPath": "Assets/Thirdparty/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Magenta.mat"
                 }
             ]
