@@ -37,6 +37,21 @@ CSF24 is a project aimed at enhancing accessibility in technology through resear
    - Click "Integrate Wwise into Project" and select the Unity project directory.
    - Follow the integration steps provided.
 
+## Resources
+
+### Unity
+There are countless resources online for Unity. Here would be a great start.
+- [Unity Tutorial for Beginners - YouTube](https://www.youtube.com/watch?v=X367yDYmogo)
+
+### Wwise
+The fall 2024 team utlized a Youtube resources and documentation for the project. One notable and great resource was Micheal G Wagner on youtube.
+- [Michael G Wagner - YouTube](https://www.youtube.com/watch?v=OchYfH0wb0U&list=PLzlEBXWjqM97U5rHMERc82sTXRBoSB_Fu)
+
+## Usage
+Provide detailed instructions on how to use the project. This can include examples, code snippets, and explanations.
+
+
+
 ## Usage
 Provide detailed instructions on how to use the project. This can include examples, code snippets, and explanations.
 
@@ -49,11 +64,9 @@ We welcome contributions from the community! To contribute, follow these steps:
 4. Push to the branch (`git push origin feature-branch`).
 5. Open a pull request.
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## Contact
-For any questions or inquiries, please contact the project maintainer at [email@example.com](mailto:email@example.com).
+For any questions or inquiries, please contact the project maintainer at [flint.million2@mnsu.edu](mailto:flint.million2@mnsu.edu).
 
 ## Acknowledgments
 We would like to thank all contributors and supporters of this project.
