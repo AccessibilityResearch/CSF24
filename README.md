@@ -52,8 +52,23 @@ Provide detailed instructions on how to use the project. This can include exampl
 
 
 
-## Usage
-Provide detailed instructions on how to use the project. This can include examples, code snippets, and explanations.
+### Logging
+**When running the project, note that files will be created on your computer.** These log files can be found under `\C:\Users\{usr}\AppData\LocalLow\Accessibility Research\EchoNav (idk)\Experiments`, or under `library\Accessibility Research\EchoNav (idk)\Experiments` for our Mac friends. </br>
+It is highly recommended that you disable logging when doing testing, especially if said testing involves work with collisions or level resets. (There were 13,000 .csv's on my laptop...) This can be done by changing the `enableLogging` bool in `LogManager` to `false`.</br>
+
+> [!NOTE]
+> This is only present on the [VRIntegrationTest branch](https://github.com/AccessibilityResearch/CSF24/tree/VR-Integration-Test), you will have to comment out `TrialLogger.WriteLog();` under `FixedUpdate` in `LogManager` and `LogManager.Instance.NewTrial();` under `LoadScene` in `JSONSerializer` if the bool is not present on yours.
+
+There are also some logging performance realated settings in the `TrialLogger` class:
+- `flushInterval` Controls how often the stream writer flushes to the file. (This is based on `fixedUpdate`) | `FrameCount` is the itterator that keeps track of said intervals.
+- `SBPool` is a "**S**tring **B**uilder **Pool**". While pooliong is mostly for multithreading (which we are not doing) it's good to have.
+You will also notice in the constructors of `TrialLogger` there are two more *possibly important* fields:
+- `_BufferSize` is the number of bytes allocated to the stream writer. The default it 8kb
+- `_Encoding` believe it or not this is the kind of encoding used... Default is UTF8
+  </br>
+
+### Virtual Reality
+It should be mentioned that there is a [BRANCH](https://github.com/AccessibilityResearch/CSF24/tree/VR-Integration-Test) of this project that has VR basics integrated. This implementation has only been tested via a simulator, but seems to work fine. 
 
 ## Contributing
 We welcome contributions from the community! To contribute, follow these steps:
