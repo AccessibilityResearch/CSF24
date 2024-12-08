@@ -44,10 +44,14 @@ There are countless resources online for Unity. Here would be a great start.
 - [Unity Tutorial for Beginners - YouTube](https://www.youtube.com/watch?v=X367yDYmogo)
 
 ### Wwise
-The fall 2024 team utlized a Youtube resources and documentation for the project. One notable and great resource was Micheal G Wagner on youtube. Make sure you watch all of Michaels videos up to part 6 and reverb zones. Michaels series of videos will teach you the basics of Wwise. After that you can watch the video on speaker panning which will be helpful when trying to replicate realistic sounds cue's and the bone conduction headset. The video after that will walk you through effects like delay, echo, and sound that you can change which will be important when you want to add another component that trys to match a realisitc sound cue.
+The fall 2024 team utlized a Youtube resources and documentation for the project. One notable and great resource was Micheal G Wagner on youtube. Make sure you watch all of Michael's videos up to part 6 and reverb zones, if you want to continue after part 6 feel free to. Michaels series of videos will teach you the basics of Wwise. After that you can watch the video on speaker panning which will be helpful when trying to replicate realistic sounds cue's with the bone conduction headset. The video after that will walk you through effects like delay, echo, and sound that you can change which will be important when you want to add another component that trys to match a realisitc sound cue. 
 - [Michael G Wagner - YouTube](https://www.youtube.com/watch?v=OchYfH0wb0U&list=PLzlEBXWjqM97U5rHMERc82sTXRBoSB_Fu)
 - [Wwise-101- Lesson 4 - Understanding Balance-Fade Speaker Panning - Youtube](https://www.youtube.com/watch?v=w74ENOAoErs)
 - [Wwise-101 - Lesson 5 - Working with Effects](https://www.youtube.com/watch?v=bnczDgQoyJI)
+
+There is already panning that is being done in the FirstPersonController script along with changes to volume and reverb/echo as you get closer to obstacles in the UpdateWallDistance method. If you need to add or edit anything with regards to effects or speaker panning can be found in the UpdateWallDistance method in the FirstPersonController script. Footsteps and echolocation are also performed in the FirstPersonController script. If you want to change any collsion sounds, navigate to the Collision Test script which is on the FirstPersonController object. You assign your collision sounds in the FirstPersonController object inspector at the Collsion Test script. 
+
+Make sure when working on Wwise with Unity that you have the Wwise project open from the Wwise launcher. This will allow the Wwise picker in your Unity project to connect to your Wwise and will get rid of any unnecessary and confusing errors, It will also make testing and debugging way easier. 
 
 
 ## Usage
