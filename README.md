@@ -44,8 +44,11 @@ There are countless resources online for Unity. Here would be a great start.
 - [Unity Tutorial for Beginners - YouTube](https://www.youtube.com/watch?v=X367yDYmogo)
 
 ### Wwise
-The fall 2024 team utlized a Youtube resources and documentation for the project. One notable and great resource was Micheal G Wagner on youtube. Make sure you watch all of these videos up to part 6 and reverb zones. This series of videos will teach you the basics of Wwise.
+The fall 2024 team utlized a Youtube resources and documentation for the project. One notable and great resource was Micheal G Wagner on youtube. Make sure you watch all of Michaels videos up to part 6 and reverb zones. Michaels series of videos will teach you the basics of Wwise. After that you can watch the video on speaker panning which will be helpful when trying to replicate realistic sounds cue's and the bone conduction headset. The video after that will walk you through effects like delay, echo, and sound that you can change which will be important when you want to add another component that trys to match a realisitc sound cue.
 - [Michael G Wagner - YouTube](https://www.youtube.com/watch?v=OchYfH0wb0U&list=PLzlEBXWjqM97U5rHMERc82sTXRBoSB_Fu)
+- [Wwise-101- Lesson 4 - Understanding Balance-Fade Speaker Panning - Youtube](https://www.youtube.com/watch?v=w74ENOAoErs)
+- [Wwise-101 - Lesson 5 - Working with Effects](https://www.youtube.com/watch?v=bnczDgQoyJI)
+
 
 ## Usage
 Provide detailed instructions on how to use the project. This can include examples, code snippets, and explanations.
