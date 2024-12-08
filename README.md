@@ -44,7 +44,7 @@ There are countless resources online for Unity. Here would be a great start.
 - [Unity Tutorial for Beginners - YouTube](https://www.youtube.com/watch?v=X367yDYmogo)
 
 ### Wwise
-The fall 2024 team utlized a Youtube resources and documentation for the project. One notable and great resource was Micheal G Wagner on youtube.
+The fall 2024 team utlized a Youtube resources and documentation for the project. One notable and great resource was Micheal G Wagner on youtube. Make sure you watch all of these videos up to part 6 and reverb zones. This series of videos will teach you the basics of Wwise.
 - [Michael G Wagner - YouTube](https://www.youtube.com/watch?v=OchYfH0wb0U&list=PLzlEBXWjqM97U5rHMERc82sTXRBoSB_Fu)
 
 ## Usage
