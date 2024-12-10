@@ -149,7 +149,7 @@ public class FirstPersonController : MonoBehaviour
     [Header("WWise Events")]
     [SerializeField] public AK.Wwise.Event walkFootstep;
     [SerializeField] public AK.Wwise.Event stomp;
-    public AK.Wwise.RTPC playerDistance;
+    public bool enableFrontRearVolumeIncrease = true; // turn this off if the volume increase is messing with front-rear panning for footsteps
     public float stepInterval = 0.1f; // a variable to determine interval between steps
     public float stepTimer = 0f;    // tracks how much time passed since last footstep sound
     float inputThreshold = 0.1f; // Define a small threshold so that footsteps stop when player stops, no delay
@@ -186,8 +186,8 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
-        playerDistance.SetGlobalValue(0);
-
+       
+  
 
         if (lockCursor)
         {
@@ -639,54 +639,132 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
+
     private void UpdateWallDistance()
     {
-        float sphereRadius = 0.75f; // Adjust to desired sensitivity
+        float sphereRadius = 0.75f; // Sensitivity for obstacle proximity detection
         Vector3 origin = transform.position;
 
-        // Detect all nearby colliders tagged as "Wall"
-        Collider[] hits = Physics.OverlapSphere(origin, maxReverbDistance);
-        float closestWallDistance = maxReverbDistance;
-        float panValue = 0.5f; // Center pan by default (0.5 is center, 0 is full left, 1 is full right)
+        // Define raycast lengths, adjust when needed
+        float leftRayLength = 7f; // Distance to check to the left
+        float rightRayLength = 7f; // Distance to check to the right
+        float forwardRayLength = 7f; // Distance to check forward
+        float backwardRayLength = 7f; // Distance to check backward
 
-        foreach (var hit in hits)
+        // Define the ray directions relative to the player
+        Vector3 leftRayDirection = -transform.right; // Left direction (negative right vector)
+        Vector3 rightRayDirection = transform.right;  // Right direction (positive right vector)
+        Vector3 forwardRayDirection = transform.forward; // Forward direction
+        Vector3 backwardRayDirection = -transform.forward; // Backward direction
+
+        // Raycast to detect obstacles on the left, right, forward, backward. Use Sphere Cast to be able to detect smaller obstacles
+        RaycastHit leftHit, rightHit, forwardHit, backwardHit;
+        bool leftWallDetected = Physics.SphereCast(origin, sphereRadius, leftRayDirection, out leftHit, leftRayLength);
+        bool rightWallDetected = Physics.SphereCast(origin, sphereRadius, rightRayDirection, out rightHit, rightRayLength);
+        bool forwardWallDetected = Physics.SphereCast(origin, sphereRadius, forwardRayDirection, out forwardHit, forwardRayLength);
+        bool backwardWallDetected = Physics.SphereCast(origin, sphereRadius, backwardRayDirection, out backwardHit, backwardRayLength);
+
+        // If a obstacle is detected on the left, right, front, or rear calculate the proximity
+        float leftProximity = 0f;
+        float rightProximity = 0f;
+        float forwardProximity = 0f;
+        float backwardProximity = 0f;
+        if (leftWallDetected)
         {
-            if (hit.CompareTag("Hallway/Walls/LeftWall") || hit.CompareTag("Hallway/Walls/RightWall") ||
-                hit.CompareTag("Hallway/Walls/FarWall") || hit.CompareTag("Hallway/Walls/CloseWall") ||
-                hit.CompareTag("Door") || hit.CompareTag("Book"))
-            {
-                // Get the nearest point on the collider to the player
-                Vector3 closestPoint = hit.bounds.ClosestPoint(origin);
-                float distance = Vector3.Distance(origin, closestPoint);
-
-                // Check if this wall is the closest one so far
-                if (distance < closestWallDistance)
-                {
-                    closestWallDistance = distance; // Track the closest wall distance
-
-                    // Determine if the wall is to the left or right of the player
-                    Vector3 directionToWall = closestPoint - origin;
-                    float dotProduct = Vector3.Dot(transform.right, directionToWall.normalized);
-
-                    // Set panValue based on the direction of the wall
-                    // If dotProduct is positive, wall is on the right; if negative, wall is on the left
-                    panValue = dotProduct > 0 ? 1f : 0f;
-                }
-            }
+            leftProximity = Mathf.Clamp01(1 - leftHit.distance / leftRayLength); // Normalize distance to 0-1
+        }     
+        if (rightWallDetected)
+        {
+            rightProximity = Mathf.Clamp01(1 - rightHit.distance / rightRayLength); // Normalize distance to 0-1
+        }
+        if (forwardWallDetected)
+        {
+            forwardProximity = Mathf.Clamp01(1 - forwardHit.distance / forwardRayLength); // Normalize distance to 0-1
+        }
+        if (backwardWallDetected)
+        {
+            backwardProximity = Mathf.Clamp01(1 - backwardHit.distance / backwardRayLength); // Normalize distance to 0-1
         }
 
-        // Set the closest distance as the wall distance if any walls are detected
-        distanceToWall = closestWallDistance < maxReverbDistance ? closestWallDistance : maxReverbDistance;
 
-        // Normalize the distance to a 0-100 range for the RTPC
-        distanceToWall = Mathf.Clamp(distanceToWall, 0, maxReverbDistance);
-        distanceToWall = (maxReverbDistance - distanceToWall) / maxReverbDistance * 100;
+        // Calculate reverb send volume based on proximity to obstacles 
+        float reverbVolume = 0f;
+        if (forwardWallDetected)
+        {
+            reverbVolume = Mathf.Clamp01(forwardProximity); // Normalize and map to 0-1
+        }
+        else if (backwardWallDetected)
+        {
+            reverbVolume = Mathf.Clamp01(backwardProximity); // Normalize and map to 0-1
+        }
+        else if (leftWallDetected || rightWallDetected)
+        {
+            // Lower reverb when moving sideways but still close to the obstacle
+            reverbVolume = Mathf.Clamp01(Mathf.Max(leftProximity, rightProximity));
+        }
+        // Adjust the RTPC value for reverb send volume
+        AkSoundEngine.SetRTPCValue("FootstepReverb", reverbVolume * 100); // Map proximity to reverb send volume (0-100 range)
 
-        // Update the RTPC for distance with the calculated distance
-        playerDistance.SetGlobalValue(distanceToWall);
 
+
+        // Calculate left-right pan value
+        float panValue = 0f;
+        if (leftWallDetected && rightWallDetected)
+        {
+            // If both obstacles are detected, find a balance point to play through both left and right headphones
+            panValue = (rightProximity - leftProximity) * 100; // -100 (left) to 100 (right)
+        }
+        else if (leftWallDetected)
+        {
+            // If only the left obstacle is detected, pan towards the left
+            panValue = -leftProximity * 100;
+        }
+        else if (rightWallDetected)
+        {
+            // If only the right obstacle is detected, pan towards the right
+            panValue = rightProximity * 100;
+        }
+
+
+
+        // Calculate front-rear pan value
+        float frontRearValue = 0f;
+        if (forwardWallDetected && backwardWallDetected)
+        {
+            frontRearValue = (forwardProximity - backwardProximity) * 100; // Balance between -100 (rear) to 100 (front)
+        }
+        else if (forwardWallDetected)
+        {
+            frontRearValue = forwardProximity * 100; // Pan front
+        }
+        else if (backwardWallDetected)
+        {
+            frontRearValue = -backwardProximity * 100; // Pan rear
+        }
+
+
+
+        float volumeValue = 0f;
+        if (forwardWallDetected)
+        {
+            volumeValue = forwardProximity * 100; // Increase volume as the player gets closer to the front obstacle
+        }
+        else if (backwardWallDetected)
+        {
+            volumeValue = backwardProximity * 100; // Increase volume as the player gets closer to the back obstacle
+        }
+
+
+
+        // Send pan value to Wwise
+        AkSoundEngine.SetRTPCValue("FootstepPan", panValue); // Multiply by 100 to match Wwise RTPC range
+        AkSoundEngine.SetRTPCValue("FrontRearPan", frontRearValue); // Front-rear panning
+        if (enableFrontRearVolumeIncrease == true)
+        {
+            AkSoundEngine.SetRTPCValue("ObstacleDistance", volumeValue); // Footstep volume based on proximity
+        }
         
-        
+
 
     }
 }

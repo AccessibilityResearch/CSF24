@@ -25,12 +25,12 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_DeepThud1" ID="{1B3C744B-FF7E-4C6E-8D66-88DDA6B43730}">
+				<Event Name="Play_WallThud" ID="{1B3C744B-FF7E-4C6E-8D66-88DDA6B43730}">
 					<ChildrenList>
 						<Action Name="" ID="{415D321A-278E-4096-954A-BFCA161C4D9F}" ShortID="113471744">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="DeepThud1" ID="{0F04B283-4C2A-446A-8D1B-42AAB8FAE904}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}"/>
+									<ObjectRef Name="WallThud" ID="{0F04B283-4C2A-446A-8D1B-42AAB8FAE904}" WorkUnitID="{35832B15-F0C9-4E4A-939B-F33EC0060A36}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

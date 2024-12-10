@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f1768bc4e87476448d5f461e9bb14c5, type: 3}
-  m_Name: 1B3C744B-FF7E-4C6E-8D66-88DDA6B43730
+  m_Script: {fileID: 11500000, guid: f8f3d79f9dc8a0348baf697d8e901eb6, type: 3}
+  m_Name: 3BBCE2BE-2427-4BC4-B48F-E86E64A6875D
   m_EditorClassIdentifier: 
-  objectName: Play_WallThud
-  id: 2955529881
-  guid: 1B3C744B-FF7E-4C6E-8D66-88DDA6B43730
+  objectName: FrontRearPan
+  id: 1716080809
+  guid: 3BBCE2BE-2427-4BC4-B48F-E86E64A6875D

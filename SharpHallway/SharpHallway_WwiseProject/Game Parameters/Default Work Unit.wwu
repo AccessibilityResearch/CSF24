@@ -8,6 +8,35 @@
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="FootstepPan" ID="{A1817A1F-5CF2-49CD-9777-A6D285F6B3AB}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="FrontRearPan" ID="{3BBCE2BE-2427-4BC4-B48F-E86E64A6875D}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="LRCollisionPan" ID="{FF56B1D9-5513-4195-A132-8CEB52EDDF6F}">
+					<PropertyList>
+						<Property Name="Min" Type="Real64" Value="-100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="FRCollisionPan" ID="{BDBEDB79-16EF-43EC-9383-23943168429E}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="FootstepReverb" ID="{3EAD01C1-882F-4161-BC33-783C69B331BB}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="10"/>
+						<Property Name="Min" Type="Real64" Value="10"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

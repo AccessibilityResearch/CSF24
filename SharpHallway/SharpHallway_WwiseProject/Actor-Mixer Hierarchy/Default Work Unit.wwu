@@ -7,7 +7,6 @@
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -33,126 +32,335 @@
 						<ActiveSource Name="pushing-grocery-cart-63821" ID="{52711288-0A8B-4537-85C0-52953C4D9D76}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="MutedThud3" ID="{97EA0A59-507C-4398-AEF7-1FDE523A1165}" ShortID="256539684">
+				<ActorMixer Name="Foot" ID="{3CF9D581-87AF-4CFB-ACEB-BDEDF4F48087}" ShortID="1072475146">
 					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="2"/>
-						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9CDD2FE4-B1C4-44B5-BD1E-2E0FAAECF1FF}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
+							<ObjectRef Name="FootstepBus" ID="{D0D4E742-8ED9-4435-BBAA-9A6BF012D1E6}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="HallReverb" ID="{B64C44A7-14C1-43C1-8530-EA2D4847138D}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="MutedThud3" ID="{846BF3A5-651D-4CB3-8263-5230F8ECF254}">
+						<RandomSequenceContainer Name="Footsteps" ID="{0B97DD9C-0A63-408A-973F-38BD57A21CD7}" ShortID="838395544">
 							<PropertyList>
-								<Property Name="TrimBegin" Type="Real64" Value="2.37111"/>
-								<Property Name="TrimEnd" Type="Real64" Value="2.63853"/>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>MutedThud3.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="848556440"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="MutedThud3" ID="{846BF3A5-651D-4CB3-8263-5230F8ECF254}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="DeepThud1" ID="{0F04B283-4C2A-446A-8D1B-42AAB8FAE904}" ShortID="128134538">
-					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="2"/>
-						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9CDD2FE4-B1C4-44B5-BD1E-2E0FAAECF1FF}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="DeepThud1" ID="{89944176-CAE9-46D7-AF51-448A83FEAF2B}">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9CDD2FE4-B1C4-44B5-BD1E-2E0FAAECF1FF}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="step1" ID="{1874B83F-ECB3-4BA9-B8A5-BAC51767DEE6}" ShortID="815883596">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9CDD2FE4-B1C4-44B5-BD1E-2E0FAAECF1FF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="run2" ID="{59A0C852-8612-4CA6-B66B-023872E078F1}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.46487"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.78101"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>run2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="922703133"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="run2" ID="{59A0C852-8612-4CA6-B66B-023872E078F1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="step2" ID="{9767BB89-7A3E-4898-A408-9F27A0682B26}" ShortID="1029404976">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9CDD2FE4-B1C4-44B5-BD1E-2E0FAAECF1FF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="run2" ID="{696C51E3-1DA0-43D6-886E-8201A78B68F8}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.81233"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.173"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>run2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="343672014"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="run2" ID="{696C51E3-1DA0-43D6-886E-8201A78B68F8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="step3" ID="{BBBCD759-1C2F-445F-A304-868FE41D12A6}" ShortID="661788191">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9CDD2FE4-B1C4-44B5-BD1E-2E0FAAECF1FF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="run2" ID="{117AAB9C-11A8-4995-BC3F-DFCFF576989D}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="1.11966"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.48687"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>run2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="102693433"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="run2" ID="{117AAB9C-11A8-4995-BC3F-DFCFF576989D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{300EE625-B727-4F9B-9995-41C7A874AE54}"/>
+							</PositioningInfo>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{9DFE2AAD-AD05-4EF7-A373-2CCBBF252CBC}" ShortID="585747981">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="OutputBusVolume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="ObstacleDistance" ID="{B6C9FFB6-01B6-43AD-8779-2BEE38D803AA}" WorkUnitID="{6880A3FC-E27D-46C6-B5FD-CD7DF194386E}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{2C57ED33-5931-40F1-92D8-3C3BBAF92DC2}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>SCurve</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>13</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+						<Sound Name="stomp" ID="{2B3B919C-59FA-41FB-B374-01AD118DCCD1}" ShortID="594419547">
 							<PropertyList>
-								<Property Name="TrimBegin" Type="Real64" Value="3.29013"/>
-								<Property Name="TrimEnd" Type="Real64" Value="3.57867"/>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>DeepThud1.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="329984591"/>
-							</MediaIDList>
-						</AudioFileSource>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9CDD2FE4-B1C4-44B5-BD1E-2E0FAAECF1FF}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="stomp" ID="{98B0E49B-15F9-4DD1-92D6-9185B93B07C5}">
+									<PropertyList>
+										<Property Name="TrimBegin" Type="Real64" Value="0.28579"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.13522"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>stomp.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="391563401"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{8F5256BE-44CD-404D-8B49-CECCC76231BA}" ShortID="476327485">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="OutputBusVolume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="ObstacleDistance" ID="{B6C9FFB6-01B6-43AD-8779-2BEE38D803AA}" WorkUnitID="{6880A3FC-E27D-46C6-B5FD-CD7DF194386E}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{4E5F0785-974C-42B8-BA25-8A3AD6FBD83E}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>SCurve</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>20</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="stomp" ID="{98B0E49B-15F9-4DD1-92D6-9185B93B07C5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="DeepThud1" ID="{89944176-CAE9-46D7-AF51-448A83FEAF2B}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="WallBump2" ID="{CD272815-DF0B-41A6-89AB-88891906A446}" ShortID="293760642">
-					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="2"/>
-						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9CDD2FE4-B1C4-44B5-BD1E-2E0FAAECF1FF}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="WallBump2" ID="{652ACDB6-0773-4205-9BB5-9006AF843422}">
+					<PositioningInfo>
+						<Panner Name="" ID="{97B18FD6-971F-4223-AEED-ACE6279D4BDD}">
 							<PropertyList>
-								<Property Name="TrimBegin" Type="Real64" Value="0.4207"/>
+								<Property Name="PanX" Type="Real64" Value="0.216427079899901"/>
+								<Property Name="PanY" Type="Real64" Value="0.0758746492296286"/>
 							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>WallBump2.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="432550782"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="WallBump2" ID="{652ACDB6-0773-4205-9BB5-9006AF843422}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="stomp" ID="{2B3B919C-59FA-41FB-B374-01AD118DCCD1}" ShortID="594419547">
-					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="2"/>
-						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9CDD2FE4-B1C4-44B5-BD1E-2E0FAAECF1FF}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="stomp" ID="{98B0E49B-15F9-4DD1-92D6-9185B93B07C5}">
-							<PropertyList>
-								<Property Name="TrimBegin" Type="Real64" Value="0.28579"/>
-								<Property Name="TrimEnd" Type="Real64" Value="1.13522"/>
-							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>stomp.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="391563401"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{E37CF836-FD1A-4A83-9372-F58583A24097}" ShortID="561005189">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="PanY"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="FrontRearPan" ID="{3BBCE2BE-2427-4BC4-B48F-E86E64A6875D}" WorkUnitID="{6880A3FC-E27D-46C6-B5FD-CD7DF194386E}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{B062DFA4-E982-426A-B261-65DFD381D865}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-100</XPos>
+																		<YPos>-100</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Log2</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>100</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{C92EBFD7-B8AE-4EA2-8E06-B6FE4F395B31}" ShortID="566839862">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="PanX"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="FootstepPan" ID="{A1817A1F-5CF2-49CD-9777-A6D285F6B3AB}" WorkUnitID="{6880A3FC-E27D-46C6-B5FD-CD7DF194386E}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{050A7508-CD55-4FF3-AA22-754E08513A2F}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-100</XPos>
+																		<YPos>-100</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Log2</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>100</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</Panner>
+					</PositioningInfo>
 					<ObjectLists>
 						<ObjectList Name="RTPC">
 							<Reference>
 								<Local>
-									<RTPC Name="" ID="{8F5256BE-44CD-404D-8B49-CECCC76231BA}" ShortID="476327485">
+									<RTPC Name="" ID="{1A57C82F-75C5-4E5D-BB12-88288BDAE4F1}" ShortID="1059785664">
 										<PropertyList>
 											<Property Name="PropertyName" Type="string" Value="OutputBusVolume"/>
 										</PropertyList>
@@ -162,16 +370,52 @@
 											</Reference>
 											<Reference Name="Curve">
 												<Custom>
-													<Curve Name="" ID="{4E5F0785-974C-42B8-BA25-8A3AD6FBD83E}">
+													<Curve Name="" ID="{F6567306-74FF-4255-83BF-B6715A57FEE1}">
 														<PropertyList>
 															<Property Name="Flags" Type="int32" Value="3"/>
 														</PropertyList>
 														<PointList>
 															<Point>
 																<XPos>0</XPos>
-																<YPos>-0</YPos>
+																<YPos>0</YPos>
 																<Flags>5</Flags>
 																<SegmentShape>SCurve</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>6</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{A22D9AF6-CFF4-479C-90C7-A76FBCA01CFE}" ShortID="797291447">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="UserAuxSendVolume0"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="FootstepReverb" ID="{3EAD01C1-882F-4161-BC33-783C69B331BB}" WorkUnitID="{6880A3FC-E27D-46C6-B5FD-CD7DF194386E}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{4168EB87-11FD-422D-A65C-45E3546A1828}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>10</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Exp1</SegmentShape>
 															</Point>
 															<Point>
 																<XPos>100</XPos>
@@ -188,13 +432,10 @@
 							</Reference>
 						</ObjectList>
 					</ObjectLists>
-					<ActiveSourceList>
-						<ActiveSource Name="stomp" ID="{98B0E49B-15F9-4DD1-92D6-9185B93B07C5}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<RandomSequenceContainer Name="Footsteps" ID="{0B97DD9C-0A63-408A-973F-38BD57A21CD7}" ShortID="838395544">
+				</ActorMixer>
+				<ActorMixer Name="Collision" ID="{B4534C47-0791-4620-8867-95F25AE13646}" ShortID="84895416">
 					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -202,13 +443,29 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9CDD2FE4-B1C4-44B5-BD1E-2E0FAAECF1FF}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
+							<ObjectRef Name="CollisionBus" ID="{EFFC234A-EC6A-48B9-B1A9-30A363E9CDF1}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="step1" ID="{1874B83F-ECB3-4BA9-B8A5-BAC51767DEE6}" ShortID="815883596">
+						<Sound Name="WallThud" ID="{0F04B283-4C2A-446A-8D1B-42AAB8FAE904}" ShortID="128134538">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-14</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>15</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -219,25 +476,31 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="run2" ID="{59A0C852-8612-4CA6-B66B-023872E078F1}">
+								<AudioFileSource Name="DeepThud1" ID="{89944176-CAE9-46D7-AF51-448A83FEAF2B}">
 									<PropertyList>
-										<Property Name="TrimBegin" Type="Real64" Value="0.46487"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.78101"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.29013"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.57867"/>
 									</PropertyList>
 									<Language>SFX</Language>
-									<AudioFile>run2.wav</AudioFile>
+									<AudioFile>DeepThud1.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="922703133"/>
+										<MediaID ID="329984591"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="run2" ID="{59A0C852-8612-4CA6-B66B-023872E078F1}" Platform="Linked"/>
+								<ActiveSource Name="DeepThud1" ID="{89944176-CAE9-46D7-AF51-448A83FEAF2B}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="step2" ID="{9767BB89-7A3E-4898-A408-9F27A0682B26}" ShortID="1029404976">
+						<Sound Name="MutedThud3" ID="{97EA0A59-507C-4398-AEF7-1FDE523A1165}" ShortID="256539684">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -248,25 +511,36 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="run2" ID="{696C51E3-1DA0-43D6-886E-8201A78B68F8}">
+								<AudioFileSource Name="MutedThud3" ID="{846BF3A5-651D-4CB3-8263-5230F8ECF254}">
 									<PropertyList>
-										<Property Name="TrimBegin" Type="Real64" Value="0.81233"/>
-										<Property Name="TrimEnd" Type="Real64" Value="1.173"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.37111"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.63853"/>
 									</PropertyList>
 									<Language>SFX</Language>
-									<AudioFile>run2.wav</AudioFile>
+									<AudioFile>MutedThud3.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="343672014"/>
+										<MediaID ID="848556440"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="run2" ID="{696C51E3-1DA0-43D6-886E-8201A78B68F8}" Platform="Linked"/>
+								<ActiveSource Name="MutedThud3" ID="{846BF3A5-651D-4CB3-8263-5230F8ECF254}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="step3" ID="{BBBCD759-1C2F-445F-A304-868FE41D12A6}" ShortID="661788191">
+						<Sound Name="Ouch" ID="{4A119BEE-B785-48B4-860D-85C8BF586BA5}" ShortID="767146147">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>0.3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-13</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -277,99 +551,134 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="run2" ID="{117AAB9C-11A8-4995-BC3F-DFCFF576989D}">
+								<AudioFileSource Name="Ouch" ID="{CF1C4D95-3DC6-478A-B4CB-740D391BAD70}">
 									<PropertyList>
-										<Property Name="TrimBegin" Type="Real64" Value="1.11966"/>
-										<Property Name="TrimEnd" Type="Real64" Value="1.48687"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.51327"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.83481"/>
 									</PropertyList>
 									<Language>SFX</Language>
-									<AudioFile>run2.wav</AudioFile>
+									<AudioFile>Ouch.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="102693433"/>
+										<MediaID ID="896989057"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="run2" ID="{117AAB9C-11A8-4995-BC3F-DFCFF576989D}" Platform="Linked"/>
+								<ActiveSource Name="Ouch" ID="{CF1C4D95-3DC6-478A-B4CB-740D391BAD70}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WallBump2" ID="{CD272815-DF0B-41A6-89AB-88891906A446}" ShortID="293760642">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="OverrideEarlyReflections" Type="bool" Value="True"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9CDD2FE4-B1C4-44B5-BD1E-2E0FAAECF1FF}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WallBump2" ID="{652ACDB6-0773-4205-9BB5-9006AF843422}">
+									<PropertyList>
+										<Property Name="TrimBegin" Type="Real64" Value="0.4207"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>WallBump2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="432550782"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WallBump2" ID="{652ACDB6-0773-4205-9BB5-9006AF843422}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
-					<ObjectLists>
-						<ObjectList Name="RTPC">
-							<Reference>
-								<Local>
-									<RTPC Name="" ID="{9DFE2AAD-AD05-4EF7-A373-2CCBBF252CBC}" ShortID="585747981">
-										<PropertyList>
-											<Property Name="PropertyName" Type="string" Value="OutputBusVolume"/>
-										</PropertyList>
-										<ReferenceList>
-											<Reference Name="ControlInput">
-												<ObjectRef Name="ObstacleDistance" ID="{B6C9FFB6-01B6-43AD-8779-2BEE38D803AA}" WorkUnitID="{6880A3FC-E27D-46C6-B5FD-CD7DF194386E}"/>
-											</Reference>
-											<Reference Name="Curve">
-												<Custom>
-													<Curve Name="" ID="{2C57ED33-5931-40F1-92D8-3C3BBAF92DC2}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="3"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>0</XPos>
-																<YPos>0</YPos>
-																<Flags>5</Flags>
-																<SegmentShape>SCurve</SegmentShape>
-															</Point>
-															<Point>
-																<XPos>100</XPos>
-																<YPos>13</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</Custom>
-											</Reference>
-										</ReferenceList>
-									</RTPC>
-								</Local>
-							</Reference>
-						</ObjectList>
-					</ObjectLists>
-				</RandomSequenceContainer>
-				<Sound Name="Ouch" ID="{4A119BEE-B785-48B4-860D-85C8BF586BA5}" ShortID="767146147">
-					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="2"/>
-						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-9</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9CDD2FE4-B1C4-44B5-BD1E-2E0FAAECF1FF}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Ouch" ID="{CF1C4D95-3DC6-478A-B4CB-740D391BAD70}">
-							<PropertyList>
-								<Property Name="TrimBegin" Type="Real64" Value="0.51327"/>
-								<Property Name="TrimEnd" Type="Real64" Value="0.83481"/>
-							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>Ouch.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="896989057"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Ouch" ID="{CF1C4D95-3DC6-478A-B4CB-740D391BAD70}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
+					<PositioningInfo>
+						<Panner Name="" ID="{DE274486-84E9-4041-A4F3-86C855D5D29F}">
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{4AC9F92A-CF6F-423A-B0B2-12189714888C}" ShortID="984460595">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="PanX"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="LRCollisionPan" ID="{FF56B1D9-5513-4195-A132-8CEB52EDDF6F}" WorkUnitID="{6880A3FC-E27D-46C6-B5FD-CD7DF194386E}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{4B661DD6-2FCD-45E0-A21B-FB0440686EDE}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-100</XPos>
+																		<YPos>-100</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Log2</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>100</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{2976BB49-A004-444E-AA27-49242F36F196}" ShortID="134443475">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="PanY"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="FRCollisionPan" ID="{BDBEDB79-16EF-43EC-9383-23943168429E}" WorkUnitID="{6880A3FC-E27D-46C6-B5FD-CD7DF194386E}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{29969187-854C-4C02-8B7A-C9DA49864285}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-100</XPos>
+																		<YPos>-100</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Log2</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>100</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</Panner>
+					</PositioningInfo>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{222F3414-88A7-05B4-1634-8D14B8379EE1}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4CC3D8FE-D5B5-DC8D-E427-9273812056BE}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -23,6 +23,16 @@
 			</Plugins>
 			<Busses>
 				<Bus Id="348963605" Name="Reverb"/>
+				<Bus Id="455962323" Name="FootstepBus">
+					<AuxBusRefs>
+						<AuxBusRef Id="2904300592" Name="HallReverb"/>
+					</AuxBusRefs>
+				</Bus>
+				<Bus Id="1993163527" Name="CollisionBus">
+					<AuxBusRefs>
+						<AuxBusRef Id="2904300592" Name="HallReverb"/>
+					</AuxBusRefs>
+				</Bus>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 			<AuxBusses>
@@ -35,10 +45,15 @@
 				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
+				<GameParameter Id="60600791" Name="FootstepReverb"/>
+				<GameParameter Id="510951580" Name="FRCollisionPan"/>
+				<GameParameter Id="1124109716" Name="FootstepPan"/>
+				<GameParameter Id="1716080809" Name="FrontRearPan"/>
 				<GameParameter Id="1961994583" Name="ObstacleDistance"/>
+				<GameParameter Id="3291598030" Name="LRCollisionPan"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E638E356-2F6B-2BD5-3705-EA8F44A2BF9E}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{22717343-6C52-52DC-28A4-A60B38C75FB0}">
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<Media>
@@ -80,24 +95,22 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="483039760" Name="Play_DeepThud1" DurationType="OneShot" DurationMin="0.28854" DurationMax="0.28854">
-					<MediaRefs>
-						<MediaRef Id="329984591"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3854155799" Name="Play_Footsteps" DurationType="OneShot" DurationMin="0.31614" DurationMax="0.36721">
 					<MediaRefs>
 						<MediaRef Id="102693433"/>
 						<MediaRef Id="343672014"/>
 						<MediaRef Id="922703133"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2904300592" Name="HallReverb"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="716284631" Name="Play_MutedThud3" DurationType="OneShot" DurationMin="0.26742" DurationMax="0.26742">
 					<MediaRefs>
 						<MediaRef Id="848556440"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1979731779" Name="Play_Ouch" DurationType="OneShot" DurationMin="0.32154" DurationMax="0.32154">
+				<Event Id="1979731779" Name="Play_Ouch" DurationType="OneShot" DurationMin="0.62154" DurationMax="0.62154">
 					<MediaRefs>
 						<MediaRef Id="896989057"/>
 					</MediaRefs>
@@ -111,32 +124,54 @@
 					<MediaRefs>
 						<MediaRef Id="922703133"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2904300592" Name="HallReverb"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="2600469398" Name="Play_step2" DurationType="OneShot" DurationMin="0.36067" DurationMax="0.36067">
 					<MediaRefs>
 						<MediaRef Id="343672014"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2904300592" Name="HallReverb"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="2600469399" Name="Play_step3" DurationType="OneShot" DurationMin="0.36721" DurationMax="0.36721">
 					<MediaRefs>
 						<MediaRef Id="102693433"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2904300592" Name="HallReverb"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="2753042117" Name="Play_stomp" DurationType="OneShot" DurationMin="0.84943" DurationMax="0.84943">
 					<MediaRefs>
 						<MediaRef Id="391563401"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2904300592" Name="HallReverb"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="3126293924" Name="Play_WallBump2" DurationType="OneShot" DurationMin="0.833175" DurationMax="0.833175">
 					<MediaRefs>
 						<MediaRef Id="432550782"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2955529881" Name="Play_WallThud" DurationType="OneShot" DurationMin="0.28854" DurationMax="0.28854">
+					<MediaRefs>
+						<MediaRef Id="329984591"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 			<GameParameters>
+				<GameParameter Id="60600791" Name="FootstepReverb"/>
+				<GameParameter Id="510951580" Name="FRCollisionPan"/>
+				<GameParameter Id="1124109716" Name="FootstepPan"/>
+				<GameParameter Id="1716080809" Name="FrontRearPan"/>
 				<GameParameter Id="1961994583" Name="ObstacleDistance"/>
+				<GameParameter Id="3291598030" Name="LRCollisionPan"/>
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BA2DC719-3F4B-2FE5-1E62-F953326253DB}</FileHash>
+	<FileHash>{8D70119B-94A3-5768-7DBD-FCBF96A92B85}</FileHash>
 </SoundBanksInfo>

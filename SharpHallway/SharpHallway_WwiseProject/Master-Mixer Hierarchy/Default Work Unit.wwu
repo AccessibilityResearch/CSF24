@@ -31,6 +31,20 @@
 								</AuxBus>
 							</ChildrenList>
 						</Bus>
+						<Bus Name="FootstepBus" ID="{D0D4E742-8ED9-4435-BBAA-9A6BF012D1E6}">
+							<ReferenceList>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="HallReverb" ID="{B64C44A7-14C1-43C1-8530-EA2D4847138D}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
+								</Reference>
+							</ReferenceList>
+						</Bus>
+						<Bus Name="CollisionBus" ID="{EFFC234A-EC6A-48B9-B1A9-30A363E9CDF1}">
+							<ReferenceList>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="HallReverb" ID="{B64C44A7-14C1-43C1-8530-EA2D4847138D}" WorkUnitID="{C80C3714-A828-47BD-820A-43B4FFFB35C8}"/>
+								</Reference>
+							</ReferenceList>
+						</Bus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

@@ -1,5 +1,7 @@
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
+	455962323	FootstepBus			\Default Work Unit\Master Audio Bus\FootstepBus	
+	1993163527	CollisionBus			\Default Work Unit\Master Audio Bus\CollisionBus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes

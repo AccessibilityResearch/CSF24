@@ -1,26 +1,31 @@
 Event	ID	Name			Wwise Object Path	Notes
 	131492894	Play_pushing_grocery_cart_63821			\Default Work Unit\Play_pushing_grocery_cart_63821	
-	483039760	Play_DeepThud1			\Default Work Unit\Play_DeepThud1	
 	716284631	Play_MutedThud3			\Default Work Unit\Play_MutedThud3	
 	1979731779	Play_Ouch			\Default Work Unit\Play_Ouch	
 	2600469397	Play_step1			\Default Work Unit\Play_step1	
 	2600469398	Play_step2			\Default Work Unit\Play_step2	
 	2600469399	Play_step3			\Default Work Unit\Play_step3	
 	2753042117	Play_stomp			\Default Work Unit\Play_stomp	
+	2955529881	Play_WallThud			\Default Work Unit\Play_WallThud	
 	3126293924	Play_WallBump2			\Default Work Unit\Play_WallBump2	
 	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	60600791	FootstepReverb			\Default Work Unit\FootstepReverb	
+	510951580	FRCollisionPan			\Default Work Unit\FRCollisionPan	
+	1124109716	FootstepPan			\Default Work Unit\FootstepPan	
+	1716080809	FrontRearPan			\Default Work Unit\FrontRearPan	
 	1961994583	ObstacleDistance			\Default Work Unit\ObstacleDistance	
+	3291598030	LRCollisionPan			\Default Work Unit\LRCollisionPan	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	102693433	step3	C:\Users\willy\OneDrive\Documents\GitHub\CSF24\SharpHallway\SharpHallway_WwiseProject\.cache\Windows\SFX\run2_666E7603.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\step3		70600
-	329984591	DeepThud1	C:\Users\willy\OneDrive\Documents\GitHub\CSF24\SharpHallway\SharpHallway_WwiseProject\.cache\Windows\SFX\DeepThud1_93BC4F92.wem		\Actor-Mixer Hierarchy\Default Work Unit\DeepThud1		55496
-	343672014	step2	C:\Users\willy\OneDrive\Documents\GitHub\CSF24\SharpHallway\SharpHallway_WwiseProject\.cache\Windows\SFX\run2_0A512AD8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\step2		69344
-	391563401	stomp	C:\Users\willy\OneDrive\Documents\GitHub\CSF24\SharpHallway\SharpHallway_WwiseProject\.cache\Windows\SFX\stomp_ECEBB1B0.wem		\Actor-Mixer Hierarchy\Default Work Unit\stomp		163188
-	432550782	WallBump2	C:\Users\willy\OneDrive\Documents\GitHub\CSF24\SharpHallway\SharpHallway_WwiseProject\.cache\Windows\SFX\WallBump2_325BBA3E.wem		\Actor-Mixer Hierarchy\Default Work Unit\WallBump2		160064
-	848556440	MutedThud3	C:\Users\willy\OneDrive\Documents\GitHub\CSF24\SharpHallway\SharpHallway_WwiseProject\.cache\Windows\SFX\MutedThud3_D872C706.wem		\Actor-Mixer Hierarchy\Default Work Unit\MutedThud3		23682
-	896989057	Ouch	C:\Users\willy\OneDrive\Documents\GitHub\CSF24\SharpHallway\SharpHallway_WwiseProject\.cache\Windows\SFX\Ouch_AD58C89E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ouch		56816
-	922703133	step1	C:\Users\willy\OneDrive\Documents\GitHub\CSF24\SharpHallway\SharpHallway_WwiseProject\.cache\Windows\SFX\run2_DBE8B9D4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\step1		60792
+	102693433	step3	C:\Users\willy\OneDrive\Documents\GitHub\CSF24\SharpHallway\SharpHallway_WwiseProject\.cache\Windows\SFX\run2_666E7603.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foot\Footsteps\step3		70600
+	329984591	WallThud	C:\Users\willy\OneDrive\Documents\GitHub\CSF24\SharpHallway\SharpHallway_WwiseProject\.cache\Windows\SFX\DeepThud1_93BC4F92.wem		\Actor-Mixer Hierarchy\Default Work Unit\Collision\WallThud		55496
+	343672014	step2	C:\Users\willy\OneDrive\Documents\GitHub\CSF24\SharpHallway\SharpHallway_WwiseProject\.cache\Windows\SFX\run2_0A512AD8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foot\Footsteps\step2		69344
+	391563401	stomp	C:\Users\willy\OneDrive\Documents\GitHub\CSF24\SharpHallway\SharpHallway_WwiseProject\.cache\Windows\SFX\stomp_ECEBB1B0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foot\stomp		163188
+	432550782	WallBump2	C:\Users\willy\OneDrive\Documents\GitHub\CSF24\SharpHallway\SharpHallway_WwiseProject\.cache\Windows\SFX\WallBump2_325BBA3E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Collision\WallBump2		160064
+	848556440	MutedThud3	C:\Users\willy\OneDrive\Documents\GitHub\CSF24\SharpHallway\SharpHallway_WwiseProject\.cache\Windows\SFX\MutedThud3_D872C706.wem		\Actor-Mixer Hierarchy\Default Work Unit\Collision\MutedThud3		23682
+	896989057	Ouch	C:\Users\willy\OneDrive\Documents\GitHub\CSF24\SharpHallway\SharpHallway_WwiseProject\.cache\Windows\SFX\Ouch_AD58C89E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Collision\Ouch		56816
+	922703133	step1	C:\Users\willy\OneDrive\Documents\GitHub\CSF24\SharpHallway\SharpHallway_WwiseProject\.cache\Windows\SFX\run2_DBE8B9D4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foot\Footsteps\step1		60792
 	951300056	pushing-grocery-cart-63821	C:\Users\willy\OneDrive\Documents\GitHub\CSF24\SharpHallway\SharpHallway_WwiseProject\.cache\Windows\SFX\pushing-grocery-cart-63821_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\pushing-grocery-cart-63821		2953824
 
