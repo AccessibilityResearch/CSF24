@@ -191,6 +191,17 @@ public class JSONScript : MonoBehaviour
                 movingObstacleScript.Speed = scene.MovingObstacles[i].Speed;
                 movingObstacleScript.RespawnDelay = scene.MovingObstacles[i].RespawnDelay;
                 movingObstacleScript.BackNForth = scene.MovingObstacles[i].BackNForth;
+
+                // Add a rigidbody to the obstacle
+                movingObstacle.AddComponent<Rigidbody>();
+
+                // Attach Wwiseattcher script to the obstacle
+                WwiseAttacher wwiseattcher = movingObstacle.AddComponent<WwiseAttacher>();
+                wwiseattcher.eventName = scene.MovingObstacles[i].EventName;
+                wwiseattcher.eventId = scene.MovingObstacles[i].EventId;
+
+                Debug.Log($"Is {gameObject.name} active? {gameObject.activeInHierarchy}");
+
             }
             #endregion
         }

@@ -202,6 +202,7 @@
                     "RespawnDelay": 2.0,
                     "Speed": 2.0,
                     "BackNForth": false,
+                    "EventName": "PLAY_PUSHING_GROCERY_CART_63821",
                     "ObstacleMaterialPath": "Assets/Thirdparty/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Magenta.mat"
                 },
                 {

@@ -13,6 +13,10 @@ public class MovingObstacleScript : MonoBehaviour
     public float Speed;
     public bool BackNForth;
 
+    public string EventName;
+    public uint EventId;
+
+
     void Start()
     {
         objRenderer = GetComponent<Renderer>();
