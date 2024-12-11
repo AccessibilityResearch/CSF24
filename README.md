@@ -3,6 +3,9 @@
 ## Overview
 CSF24 is a project aimed at enhancing accessibility in technology through research and development. This repository contains the codebase, documentation, and resources related to the CSF24 project.
 
+## Branching
+The last finshed project can be found in the Final Hallway Dev branch
+
 ## Features
 - **Accessibility Research**: Conducting studies and experiments to improve accessibility features.
 - **Development**: Building tools and applications that enhance accessibility.
