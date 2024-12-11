@@ -21,11 +21,15 @@ public class TrialLogger : IDisposable {
 
 	private List<string> buffer = new List<string>();
 	private List<string> collisions = new List<string>();
+	
+	//Does NOT need to be > 10.
 	private SBPool pool = new SBPool(10);
 
 	bool active = false;
 	bool disposed;
 
+	public TrialLogger(Transform _subject, string _path, int _flushInterval = 100, int _bufferSize = 8192)
+		: this(_subject, _path, _flushInterval, _bufferSize, Encoding.UTF8) { }
 
 	public TrialLogger(Transform _subject, string _path, int _flushInterval, int _bufferSize, Encoding _encoding) {
 		subject = _subject;
@@ -44,9 +48,6 @@ public class TrialLogger : IDisposable {
 
 		startTime = Time.time;
 	}
-
-	public TrialLogger(Transform _subject, string _path, int _flushInterval = 100, int _bufferSize = 8192)
-		: this(_subject, _path, _flushInterval, _bufferSize, Encoding.UTF8) { }
 
 	//bad naming on my part but whutever
 	public void Start() {

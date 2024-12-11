@@ -37,10 +37,11 @@ public class Player : MonoBehaviour
 
     public void OnControllerColliderHit(ControllerColliderHit hit)
 	{
+		//oh boy this needs a lot of work...
+		//Basically character controllers do not have OnCollisionEnter, which makes logging collisions on enter really tough...
 		string name = hit.gameObject.name;
 		if(collisions.Add(name)) {
-			if(LogManager.Instance.trialLogger == null) { throw new NullReferenceException("Player: TrialLogger does not exist."); }
-			LogManager.Instance.trialLogger.LogCollision(name);
+			LogManager.Instance.LogCollision(name);
 		}
 	}
 	

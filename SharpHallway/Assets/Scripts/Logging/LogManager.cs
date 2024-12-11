@@ -11,6 +11,8 @@ public class LogManager : MonoBehaviour {
 	//Looking at this code has given me a small handful of diseases but at least it works :)  -- It's mostly the naming schemes and the orginization of the program (TransformSpy should not be the logging manager [hey thats a good file name!])
 	//I am starting to like it more.
 
+	private const bool enableLogging = true;
+
 	//So many static vars :/
 	private static LogManager instance;
 	public static LogManager Instance { get { return instance; } private set { instance = value; } }
@@ -29,30 +31,37 @@ public class LogManager : MonoBehaviour {
 
 	public void Start()
 	{
-		if (TransformSpy.Body == null) { throw new MissingReferenceException("LogManager: TransformSpy must be attached to player camera for logging to occur."); }
+		if (enableLogging && TransformSpy.Body == null) { throw new MissingReferenceException("LogManager: TransformSpy must be attached to player camera for logging to occur."); }
 	}
 
 	public void FixedUpdate() {
-		if (trialLogger != null) {
+		if (enableLogging && trialLogger != null) {
 			trialLogger.WriteLog();
 		}
 	}
 
+	public void LogCollision(string name) {
+		if(enableLogging && trialLogger == null) { throw new MissingReferenceException("LogManager: TrialLogger not created."); }
+		trialLogger.LogCollision(name);
+	}
+
 	public void NewTrial() {
-		//This handles everything, if it's the start of an expirement we create a new folder to hold the trial logs.
-		//this also keeps track of the trial we are currently on (this may get delegated to another script so the expirements will actuall end)
-		//If a trail logger already exists (will most of the time), it needs to be disposed (free its memory cuz stream writer)
+		if(enableLogging) {
+			//This handles everything, if it's the start of an expirement we create a new folder to hold the trial logs.
+			//this also keeps track of the trial we are currently on (this may get delegated to another script so the expirements will actuall end)
+			//If a trail logger already exists (will most of the time), it needs to be disposed (free its memory cuz stream writer)
 
-		//Finally just make a new logger and tell it to start (probably unessary) yes I know I can't spell.
+			//Finally just make a new logger and tell it to start (probably unessary) yes I know I can't spell.
 
-		Debug.Log($"New Trial #{TrialNum}");
-		if (TrialNum++ == 0) { CreateBasePath(); Debug.Log("New Base Path"); }
+			Debug.Log($"New Trial #{TrialNum}");
+			if(TrialNum++ == 0) { CreateBasePath(); Debug.Log("New Base Path"); }
 
-		if (TransformSpy.Body == null) { throw new MissingReferenceException("LogManager: TransformSpy must be attached to player camera for logging to occur."); }
-		if (trialLogger != null) { trialLogger.Dispose(); }
+			if(TransformSpy.Body == null) { throw new MissingReferenceException("LogManager: TransformSpy must be attached to player camera for logging to occur."); }
+			if(trialLogger != null) { trialLogger.Dispose(); }
 
-		trialLogger = new TrialLogger(TransformSpy.Transfourm, Path.Combine(basePath, $"{TrialNum}.csv"));
-		trialLogger.Start();
+			trialLogger = new TrialLogger(TransformSpy.Transfourm, Path.Combine(basePath, $"{TrialNum}.csv"));
+			trialLogger.Start();
+		}
 	}
 
 	private void CreateBasePath() {
