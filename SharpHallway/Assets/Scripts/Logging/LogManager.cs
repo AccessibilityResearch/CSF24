@@ -38,6 +38,10 @@ public class LogManager : MonoBehaviour {
 		}
 	}
 
+	public void LogCollision(string name) {
+		if(trialLogger == null) { throw new MissingReferenceException("LogManager: TrialLogger does not exist."); }
+		trialLogger.LogCollision(name);
+	}
 	public void NewTrial() {
 		//This handles everything, if it's the start of an expirement we create a new folder to hold the trial logs.
 		//this also keeps track of the trial we are currently on (this may get delegated to another script so the expirements will actuall end)
@@ -98,4 +102,8 @@ public class LogManager : MonoBehaviour {
 
 		return sb.ToString();
 	}
+
+    private void OnApplicationQuit() {
+        if(trialLogger != null) { trialLogger.Dispose(); }
+    }
 }

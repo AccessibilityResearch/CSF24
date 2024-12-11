@@ -101,7 +101,7 @@ public class TrialLogger : IDisposable {
 	public void LogCollision(string name) {
 		if (disposed) { throw new ObjectDisposedException($"Attempting to call methods on disposed class\n{path}"); }
 		if(!active){ return; }
-
+		Debug.Log($"TL: {name}");
 		collisions.Add(name);
 	}
 

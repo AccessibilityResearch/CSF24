@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
 	public static Player Instance { get { return instance; } set{ instance = value; } }
 
     private HashSet<string> collisions = new HashSet<string>();
+	private HashSet<string> prevCollisions = new HashSet<string>();
+
     private FPSController controller;
 	
 	private bool fin = false;
@@ -33,15 +35,28 @@ public class Player : MonoBehaviour
 		if(controller != null) { controller.enabled = true; }
 		fin = false;
 	}
-    
+
+    public void FixedUpdate() {
+		foreach(var v in collisions) {
+			if(!prevCollisions.Contains(v)) {
+				Debug.Log(v);
+				LogManager.Instance.LogCollision(v); 
+			}
+		}
+
+		prevCollisions.Clear();
+
+		foreach(var v in collisions) {
+			prevCollisions.Add(v);
+		}
+
+		collisions.Clear();
+    }
 
     public void OnControllerColliderHit(ControllerColliderHit hit)
 	{
 		string name = hit.gameObject.name;
-		if(collisions.Add(name)) {
-			if(LogManager.Instance.trialLogger == null) { throw new NullReferenceException("Player: TrialLogger does not exist."); }
-			LogManager.Instance.trialLogger.LogCollision(name);
-		}
+		collisions.Add(name);
 	}
 	
 
