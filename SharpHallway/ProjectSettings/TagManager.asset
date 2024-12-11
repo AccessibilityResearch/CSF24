@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Hallway/CF/Ceiling
+  - Hallway/Walls/RightWall
+  - Hallway/Walls/CloseWall
+  - Hallway/CF/Floor
+  - Hallway/Walls/LeftWall
+  - Hallway/Walls/FarWall
+  - Door
+  - Book
   layers:
   - Default
   - TransparentFX
